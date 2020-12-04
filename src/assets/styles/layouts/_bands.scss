@@ -1,0 +1,21 @@
+.bands {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.band-card {
+  flex: 0 0 300px;
+  margin: 1em;
+  padding: 0.5em;
+
+  &__img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  &__title {
+    margin: 0.5em 0;
+  }
+}

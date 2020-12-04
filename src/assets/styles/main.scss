@@ -13,13 +13,88 @@
 // @import "some-node-module";
 // @import "@some-company/some-node-module";
 
+@import "~bootstrap/scss/bootstrap.scss";
+@import "@fortawesome/fontawesome-free/css/all.css";
+
 /**
  * Import layouts
  * It's a best practice to use a partial for each page
  */
 
 @import "layouts/home";
+@import "layouts/bands";
+@import "layouts/info";
 
 /**
  * Do NOT include anything else in this file!
  */
+
+@font-face {
+  font-family: pilowlava;
+  src: url(../fonts/Pilowlava-Regular.woff2);
+}
+
+@font-face {
+  font-family: magic;
+  src: url(../fonts/magic.ttf);
+}
+
+html {
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+main {
+  background: rgb(255, 255, 127);
+  background: linear-gradient(0deg, rgb(255, 255, 127) 0%, rgb(107, 176, 255) 100%);
+}
+
+h1 {
+  font-family: pilowlava, Arial, Helvetica, sans-serif;
+  font-size: 3em;
+  margin: 1.2em 0;
+  text-align: center;
+}
+
+.logo {
+  font-family: magic, Arial, Helvetica, sans-serif;
+  color: $c-blue;
+}
+
+.logo:hover,
+footer a:hover,
+header a:hover {
+  color: $c-yellow;
+  text-decoration: none;
+}
+
+h3 {
+  font-family: pilowlava, Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+}
+
+header,
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2em;
+  align-items: center;
+  background: #000;
+}
+
+nav a,
+footer i {
+  color: $c-blue;
+  margin-left: 1em;
+}
+
+nav a:hover {
+  color: $c-yellow;
+  text-decoration: none;
+}
